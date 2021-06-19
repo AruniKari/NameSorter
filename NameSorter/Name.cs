@@ -9,9 +9,7 @@ namespace NameSorter
 
         public bool ValidateLastNameExist(string fullName)
         {
-            var nameParts = fullName.Trim().Split(' ');
-            // var lastName = nameParts.LastOrDefault();
-
+            var nameParts = fullName.Trim().Split(' ');           
             if (nameParts.Length >= 2)
                 return true;
             else
@@ -20,11 +18,9 @@ namespace NameSorter
 
         public bool ValidString(string fullName)
         {
-            var nameParts = fullName.Trim().Split(' ');
-            
+            var nameParts = fullName.Trim().Split(' ');            
             if (Regex.IsMatch(fullName, @"^[a-zA-Z ]+$"))
                 return true;
-
             else
                 return false;
         }
