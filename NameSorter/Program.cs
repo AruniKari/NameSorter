@@ -19,7 +19,7 @@ namespace NameSorter
                     
                 }
                 Program program = new Program();
-                program.SortingNames();
+                program.SortingNames(args[0].ToString());
 
             }
             catch (Exception ex)
@@ -28,15 +28,12 @@ namespace NameSorter
             }
         }
 
-        public void SortingNames()
+        public void SortingNames( string fileName)
         {
             try
             {
                 Name nameObj = new Name();
-
-               // Console.Write("name-sorter :");
-                var fileName = Console.ReadLine();
-
+               
                 // Check the give file is exist
                 if (File.Exists(fileName))
                 {
